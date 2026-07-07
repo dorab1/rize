@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RIZE — кофеин с отложенным высвобождением. И ты со всем справишься.</title>
+<meta name="description" content="RIZE — капсула кофеина с отложенным высвобождением до 8 часов. Прими вечером — проснись бодрым по будильнику, без грогги-окна и без бессонницы.">
+<meta name="theme-color" content="#060606">
+
+<!-- Open Graph -->
+<meta property="og:title" content="RIZE — и ты со всем справишься">
+<meta property="og:description" content="Кофеин на ночь, чтобы проснуться вовремя. Отложенное высвобождение до 8 часов.">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23060606'/%3E%3Ctext x='50' y='68' font-family='Arial,sans-serif' font-weight='900' font-size='60' fill='%23cbff33' text-anchor='middle'%3Er%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<!--
+  Яндекс.Метрика: раскомментируйте блок ниже и подставьте свой номер счётчика
+  (получить его можно в metrika.yandex.ru после создания счётчика).
+
+  <script type="text/javascript">
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();
+     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+     ym(XXXXXXXX, "init", {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+-->
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a href="#top" class="logo" aria-label="RIZE — на главную">rize<span class="logo__tm">™</span></a>
+
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="#how">Как работает</a>
+      <a href="#facts">Состав</a>
+      <a href="#audience">Для кого</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <button class="btn btn--primary btn--sm js-open-modal" type="button">
+      Оставить заявку
+    </button>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Мобильная навигация" hidden>
+    <a href="#how">Как работает</a>
+    <a href="#facts">Состав</a>
+    <a href="#audience">Для кого</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#faq">FAQ</a>
+    <button class="btn btn--primary js-open-modal" type="button">Оставить заявку</button>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section id="top" class="hero">
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <div class="wrap hero__inner">
+
+    <div class="hero__copy">
+      <p class="eyebrow">
+        <span class="corner-tick" aria-hidden="true">[</span>
+        Инженерное решение для утра. Создано, чтобы ты был впереди.
+        <span class="corner-tick" aria-hidden="true">]</span>
+      </p>
+
+      <h1 class="hero__title">
+        RIZE — И ТЫ СО ВСЕМ<br class="hero__br"> СПРАВИШЬСЯ
+      </h1>
+
+      <p class="hero__subtitle">
+        Кофеин на ночь, чтобы проснуться вовремя.<br class="hero__br">
+        Отложенное высвобождение до 8 часов.
+      </p>
+
+      <div class="hero__cta-row">
+        <button class="btn btn--primary btn--lg js-open-modal" type="button">
+          Оставить заявку
+        </button>
+        <a href="#how" class="btn btn--ghost btn--lg">
+          Как это работает
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="hero__badges">
+        <span class="tag-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l7 4v6c0 5-3.4 8.4-7 10-3.6-1.6-7-5-7-10V6l7-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          БАД · Dietary Supplement
+        </span>
+        <span class="tag-badge">18+</span>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="mission-widget" aria-hidden="true">
+        <p class="mission-widget__title">MISSION:</p>
+        <ol class="mission-widget__list">
+          <li><span class="mission-dot mission-dot--done"></span>ПРИЁМ ВЕЧЕРОМ</li>
+          <li><span class="mission-dot mission-dot--done"></span>6Ч ПОКОЯ</li>
+          <li><span class="mission-dot"></span>ПОДЪЁМ БОДРЫМ</li>
+        </ol>
+      </div>
+
+      <div class="capsule-stage bracket-frame">
+        <div class="corner corner--tl" aria-hidden="true"></div>
+        <div class="corner corner--tr" aria-hidden="true"></div>
+        <div class="corner corner--bl" aria-hidden="true"></div>
+        <div class="corner corner--br" aria-hidden="true"></div>
+        <canvas id="capsule-canvas" aria-label="3D-анимация капсулы RIZE с микрокапсулами отложенного высвобождения" role="img"></canvas>
+        <p class="capsule-stage__fallback">RIZE</p>
+      </div>
+
+      <p class="coords" aria-hidden="true">40.7128° N · 74.0060° W</p>
+    </div>
+  </div>
+
+  <div class="hero__stats wrap">
+    <div class="stat">
+      <p class="stat__value">150<span class="stat__unit">мг</span></p>
+      <p class="stat__label">Кофеина на капсулу</p>
+    </div>
+    <div class="stat">
+      <p class="stat__value">6<span class="stat__unit">ч</span></p>
+      <p class="stat__label">До начала высвобождения</p>
+    </div>
+    <div class="stat">
+      <p class="stat__value">8<span class="stat__unit">ч</span></p>
+      <p class="stat__label">Полный цикл действия</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="problem section">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--alone">Знакомая проблема</p>
+    <h2 class="section__title">Обычный кофеин работает не тогда, когда нужно</h2>
+    <p class="section__lede">
+      Вечером кофе мешает уснуть. Утром — действует только через 20–30 минут после чашки,
+      а до этого ты уже разбудил будильник, умылся и всё ещё в тумане. RIZE убирает это окно совсем.
+    </p>
+
+    <div class="compare">
+      <div class="compare__col compare__col--bad">
+        <p class="compare__head">Обычный кофеин</p>
+        <ul class="compare__list">
+          <li>Вечером — не уснуть до 2–3 ночи</li>
+          <li>Утром — 20–30 минут до эффекта</li>
+          <li>Между будильником и бодростью — грогги-окно</li>
+          <li>Резкий подъём и такой же резкий спад</li>
+        </ul>
+      </div>
+      <div class="compare__col compare__col--good">
+        <p class="compare__head">RIZE</p>
+        <ul class="compare__list">
+          <li>Приём вечером — сон не нарушается</li>
+          <li>Оболочка держит кофеин взаперти 6 часов</li>
+          <li>Высвобождение подгадано к моменту подъёма</li>
+          <li>Просыпаешься уже бодрым, без раскачки</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how" class="how section">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--alone">Механика</p>
+    <h2 class="section__title">Как это работает</h2>
+    <p class="section__lede">Одна капсула. Один точно рассчитанный момент высвобождения.</p>
+
+    <div class="timeline">
+      <div class="timeline__track" aria-hidden="true"></div>
+
+      <div class="timeline__step">
+        <div class="timeline__marker">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <p class="timeline__time">22:00 · Приём</p>
+        <p class="timeline__text">Капсула с двойной оболочкой держит кофеин взаперти. Засыпаешь как обычно — действующее вещество ещё не в крови.</p>
+      </div>
+
+      <div class="timeline__step">
+        <div class="timeline__marker">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <p class="timeline__time">~04:00 · +6 часов</p>
+        <p class="timeline__text">Внешняя оболочка растворяется. Микрокапсулы внутри начинают постепенно высвобождать кофеин в кровь.</p>
+      </div>
+
+      <div class="timeline__step">
+        <div class="timeline__marker">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <p class="timeline__time">06:00–06:30 · Подъём</p>
+        <p class="timeline__text">Концентрация выходит на пик к первому будильнику. Просыпаешься сразу бодрым — без второй чашки кофе.</p>
+      </div>
+    </div>
+
+    <figure class="cross-section" aria-hidden="true">
+      <svg viewBox="0 0 320 140" width="100%" height="100%">
+        <rect x="10" y="30" width="300" height="80" rx="40" fill="none" stroke="#cbff33" stroke-width="1.5" opacity="0.5"/>
+        <rect x="10" y="30" width="150" height="80" rx="40" fill="#cbff33" opacity="0.06"/>
+        <g fill="#cbff33">
+          <circle cx="55" cy="60" r="4" opacity="0.8"/>
+          <circle cx="80" cy="80" r="5" opacity="0.6"/>
+          <circle cx="110" cy="55" r="3.5" opacity="0.7"/>
+          <circle cx="130" cy="85" r="4.5" opacity="0.5"/>
+          <circle cx="60" cy="90" r="3" opacity="0.6"/>
+          <circle cx="150" cy="65" r="4" opacity="0.7"/>
+        </g>
+        <g fill="#cbff33">
+          <circle cx="190" cy="70" r="3" opacity="0.9"><animate attributeName="cy" values="70;20;70" dur="3.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0;0.9" dur="3.2s" repeatCount="indefinite"/></circle>
+          <circle cx="230" cy="60" r="3.5" opacity="0.9"><animate attributeName="cy" values="60;10;60" dur="2.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0;0.9" dur="2.6s" repeatCount="indefinite"/></circle>
+          <circle cx="265" cy="80" r="2.5" opacity="0.9"><animate attributeName="cy" values="80;25;80" dur="3.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0;0.9" dur="3.6s" repeatCount="indefinite"/></circle>
+          <circle cx="205" cy="90" r="3" opacity="0.9"><animate attributeName="cy" values="90;35;90" dur="2.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0;0.9" dur="2.9s" repeatCount="indefinite"/></circle>
+        </g>
+        <text x="80" y="128" text-anchor="middle" fill="#9a9a95" font-family="JetBrains Mono, monospace" font-size="9">ОБОЛОЧКА ДЕРЖИТ</text>
+        <text x="235" y="128" text-anchor="middle" fill="#9a9a95" font-family="JetBrains Mono, monospace" font-size="9">ВЫСВОБОЖДЕНИЕ</text>
+      </svg>
+      <figcaption class="visually-hidden">Схема капсулы в разрезе: слева кофеин удерживается оболочкой, справа микрокапсулы постепенно высвобождают вещество</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ SUPPLEMENT FACTS ============ -->
+<section id="facts" class="facts section">
+  <div class="wrap facts__grid">
+    <div class="facts__copy">
+      <p class="eyebrow eyebrow--alone">Состав</p>
+      <h2 class="section__title">Прозрачный состав. Без сюрпризов.</h2>
+      <p class="section__lede">
+        RIZE — это две активные природные формулы кофеина в оболочке с отложенным высвобождением.
+        Ничего лишнего, весь состав — на этикетке.
+      </p>
+      <ul class="facts__notes">
+        <li>Кофеин из экстракта кофейных зёрен (Coffea robusta)</li>
+        <li>Экстракт семян гуараны (Paullinia cupana)</li>
+        <li>Оболочка отложенного высвобождения</li>
+      </ul>
+    </div>
+
+    <div class="supplement-card bracket-frame">
+      <div class="corner corner--tl" aria-hidden="true"></div>
+      <div class="corner corner--tr" aria-hidden="true"></div>
+      <div class="corner corner--bl" aria-hidden="true"></div>
+      <div class="corner corner--br" aria-hidden="true"></div>
+
+      <p class="supplement-card__title">SUPPLEMENT FACTS</p>
+      <p class="supplement-card__row supplement-card__row--meta">Размер порции: 1 капсула</p>
+      <p class="supplement-card__row supplement-card__row--meta">Порций в упаковке: 30</p>
+
+      <div class="supplement-card__divider"></div>
+
+      <div class="supplement-card__head-row">
+        <span>Активные вещества на порцию</span>
+        <span>% от суточной нормы</span>
+      </div>
+
+      <div class="supplement-card__divider"></div>
+
+      <div class="supplement-card__row">
+        <span>Кофеин (из экстракта кофейных зёрен) <em>(Coffea robusta)</em></span>
+        <span>150 мг **</span>
+      </div>
+      <div class="supplement-card__row">
+        <span>Экстракт семян гуараны <em>(Paullinia cupana)</em></span>
+        <span>50 мг **</span>
+      </div>
+
+      <div class="supplement-card__divider"></div>
+      <p class="supplement-card__foot">** Суточная норма потребления не установлена</p>
+
+      <p class="supplement-card__other">
+        <strong>Прочие ингредиенты:</strong> микрокристаллическая целлюлоза, стеариновая кислота, декстроза, альгинат натрия, хлорид кальция, стеарат натрия, этилцеллюлоза, Opadry® (оранжевый).
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUDIENCE ============ -->
+<section id="audience" class="audience section">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--alone">Для кого</p>
+    <h2 class="section__title">Создан для тех, у кого нет права проспать</h2>
+
+    <div class="audience__grid">
+      <article class="audience-card">
+        <span class="audience-card__icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6.5 6.5l11 11M4 9l3-3M17 20l3-3M2.5 10.5l3-3M13.5 21.5l3-3M15 3l2 2-2 2-2-2 2-2zM3 15l2 2-2 2-2-2 2-2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 class="audience-card__title">Спортсмены</h3>
+        <p class="audience-card__text">Утренняя тренировка без раскачки — фокус и энергия готовы ещё до будильника.</p>
+      </article>
+
+      <article class="audience-card">
+        <span class="audience-card__icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="2" y="8" width="20" height="10" rx="5" stroke="currentColor" stroke-width="1.6"/><path d="M7 11v4M5 13h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="16" cy="12" r="1" fill="currentColor"/><circle cx="18.5" cy="14.5" r="1" fill="currentColor"/></svg>
+        </span>
+        <h3 class="audience-card__title">Геймеры</h3>
+        <p class="audience-card__text">После ночной сессии — чистое пробуждение к первой паре или созвону, без пересыпа.</p>
+      </article>
+
+      <article class="audience-card">
+        <span class="audience-card__icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l4 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        <h3 class="audience-card__title">Сменный график</h3>
+        <p class="audience-card__text">Медики и IT-дежурные: стабильный подъём даже когда режим сна каждый день разный.</p>
+      </article>
+
+      <article class="audience-card">
+        <span class="audience-card__icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l10 5-10 5L2 8l10-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 class="audience-card__title">Студенты перед сессией</h3>
+        <p class="audience-card__text">Меньше кофе литрами с утра — больше ясной головы на самом экзамене.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews" class="reviews section">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--alone">Ранние тестировщики</p>
+    <h2 class="section__title">Что говорят те, кто уже попробовал формулу</h2>
+    <p class="section__note">Отзывы участников закрытого тестирования формулы. Индивидуальный результат может отличаться.</p>
+
+    <div class="reviews__grid">
+      <blockquote class="review-card">
+        <span class="review-card__avatar" aria-hidden="true">А</span>
+        <p class="review-card__text">«Это именно то, что я искал. Проснулся отдохнувшим и сразу вскочил с кровати этим утром!»</p>
+        <cite class="review-card__cite">Антон · спортзал по утрам</cite>
+      </blockquote>
+
+      <blockquote class="review-card">
+        <span class="review-card__avatar" aria-hidden="true">М</span>
+        <p class="review-card__text">«Расскажу как есть: мне нужно принимать по 2 капсулы, но это работает. Единственная сложность — заметный спад энергии в начале дня, сейчас с этим разбираюсь. А вот с подъёмом всё отлично: пью в 22:00 — и просыпаюсь ещё до будильника в 6:30. Стало больше энергии и даже мотивации по утрам. Рекомендую, куплю ещё.»</p>
+        <cite class="review-card__cite">Марина · сменный график</cite>
+      </blockquote>
+
+      <blockquote class="review-card">
+        <span class="review-card__avatar" aria-hidden="true">Д</span>
+        <p class="review-card__text">«Продукт работает. Раньше просыпался разбитым и без кофе с сахаром и молоком было не начать день. Теперь встаю отдохнувшим, без тяги к сладкому кофе — и наконец стал тренироваться по утрам!»</p>
+        <cite class="review-card__cite">Денис · утренние тренировки</cite>
+      </blockquote>
+
+      <blockquote class="review-card">
+        <span class="review-card__avatar" aria-hidden="true">К</span>
+        <p class="review-card__text">«RIZE помогает мне легко вставать по утрам. Чувствую себя энергичным и готовым к работе. Однозначно рекомендую.»</p>
+        <cite class="review-card__cite">Ксения · студентка</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WAITLIST CTA ============ -->
+<section id="waitlist" class="waitlist section">
+  <div class="wrap waitlist__inner bracket-frame">
+    <div class="corner corner--tl" aria-hidden="true"></div>
+    <div class="corner corner--tr" aria-hidden="true"></div>
+    <div class="corner corner--bl" aria-hidden="true"></div>
+    <div class="corner corner--br" aria-hidden="true"></div>
+
+    <p class="eyebrow eyebrow--alone">Первая партия ограничена</p>
+    <h2 class="section__title section__title--center">Будь в числе первых</h2>
+    <p class="section__lede section__lede--center">
+      Мы тестируем спрос перед запуском производства. Оставь контакты — сообщим точную дату старта
+      и дадим ранний доступ по специальной цене первым в списке.
+    </p>
+    <button class="btn btn--primary btn--lg js-open-modal" type="button">
+      Оставить заявку
+    </button>
+    <p class="waitlist__hint">Никакого спама. Только одно письмо — когда откроются продажи.</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="faq section">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--alone">Вопросы</p>
+    <h2 class="section__title">Частые вопросы</h2>
+
+    <div class="faq__list">
+      <details class="faq-item">
+        <summary>RIZE — это лекарство?</summary>
+        <p>Нет. RIZE — биологически активная добавка к пище, а не лекарственное средство. Продукт не предназначен для диагностики, лечения или профилактики заболеваний.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Есть ли побочные эффекты?</summary>
+        <p>Как и у любого продукта с кофеином, возможна индивидуальная чувствительность. Не рекомендуется при непереносимости кофеина, беременности, кормлении грудью и лицам младше 18 лет. Перед применением рекомендуется консультация со специалистом.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Сколько капсул принимать?</summary>
+        <p>Рекомендуемая доза — 1 капсула перед сном, примерно за 6–8 часов до желаемого времени пробуждения. Не превышайте рекомендуемую дозу без консультации со специалистом.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Почему нельзя просто выпить кофе утром?</summary>
+        <p>Кофеин из напитка усваивается 20–30 минут — всё это время ты остаёшься сонным. RIZE запускает высвобождение заранее, пока ты ещё спишь, и концентрация выходит на пик к моменту будильника.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Когда начнутся продажи?</summary>
+        <p>Сейчас мы тестируем спрос на первую партию. Оставь заявку в списке ожидания — сообщим точную дату старта продаж одним из первых.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__top">
+      <a href="#top" class="logo logo--footer">rize<span class="logo__tm">™</span></a>
+      <p class="site-footer__tagline">BUILT DIFFERENT. <span>→</span> BUILT TO DELIVER.</p>
+    </div>
+
+    <nav class="site-footer__nav" aria-label="Навигация в подвале">
+      <a href="#how">Как работает</a>
+      <a href="#facts">Состав</a>
+      <a href="#audience">Для кого</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <p class="disclaimer">
+      RIZE является биологически активной добавкой к пище, а не лекарственным средством.
+      Перед применением рекомендуется проконсультироваться с врачом. Не рекомендуется детям,
+      беременным и кормящим женщинам, а также лицам с индивидуальной непереносимостью компонентов
+      состава. Продукт не предназначен для диагностики, лечения или профилактики каких-либо
+      заболеваний. Материалы страницы носят информационный характер и не являются публичной
+      офертой. Товар предназначен для лиц старше 18 лет.
+    </p>
+
+    <div class="site-footer__bottom">
+      <p>© <span id="year"></span> RIZE. Все права защищены.</p>
+      <p class="coords" aria-hidden="true">40.7128° N · 74.0060° W</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MODAL ============ -->
+<div class="modal" id="waitlist-modal" aria-hidden="true">
+  <div class="modal__backdrop" data-close tabindex="-1"></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal__close" data-close type="button" aria-label="Закрыть окно">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <h3 id="modal-title">Оставь заявку</h3>
+    <p class="modal__sub">Мы сообщим точную дату старта продаж и дадим ранний доступ первым в списке.</p>
+
+    <div class="modal__frame-wrap">
+      <iframe id="yandex-form-frame" title="Форма заявки RIZE" loading="lazy" hidden></iframe>
+      <p class="modal__fallback" id="modal-fallback">
+        Форма ещё подключается. Загляни чуть позже — или напиши нам напрямую, чтобы попасть в список первыми.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+<script type="module" src="capsule.js"></script>
+</body>
+</html>
