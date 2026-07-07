@@ -6,7 +6,7 @@
   // Пример: "https://forms.yandex.ru/u/XXXXXXXXXXXXXXXXXXXX/"
   // Пока строка пустая, модалка показывает вежливую заглушку.
   // ============================================================
-  const YANDEX_FORM_URL = "https://radio.mipt.ru";
+  const YANDEX_FORM_URL = "https://forms.yandex.ru/u/6a4d3f5649af4715d120b5d0";
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
