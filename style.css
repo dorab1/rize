@@ -259,16 +259,43 @@ body.no-scroll { overflow: hidden; }
 /* ============================================================
    Hero
    ============================================================ */
-.hero { position: relative; overflow: hidden; padding-top: clamp(48px, 8vw, 84px); }
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(48px, 8vw, 84px);
+  min-height: clamp(620px, 88vh, 920px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__bg-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% 45%;
+}
+
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(6, 6, 6, 0.96) 0%, rgba(6, 6, 6, 0.86) 24%, rgba(6, 6, 6, 0.5) 44%, rgba(6, 6, 6, 0.12) 66%, transparent 85%),
+    linear-gradient(180deg, transparent 50%, rgba(6, 6, 6, 0.55) 82%, var(--bg) 100%);
+}
 
 .hero__inner {
   position: relative;
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: clamp(32px, 6vw, 64px);
-  align-items: center;
+  z-index: 2;
   padding-block: clamp(32px, 5vw, 56px) clamp(48px, 7vw, 72px);
 }
+
+.hero__copy { max-width: 640px; }
 
 .hero__title {
   font-family: var(--font-display);
@@ -292,25 +319,9 @@ body.no-scroll { overflow: hidden; }
 .hero__cta-row { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
 .hero__badges { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
-.hero__visual { display: flex; flex-direction: column; gap: 18px; }
-
-.capsule-stage {
-  position: relative;
-  width: 100%;
-  max-width: 520px;
-  aspect-ratio: 16 / 9;
-  margin-inline: auto;
-  border-radius: 28px;
-  overflow: hidden;
-  background: radial-gradient(circle at 50% 42%, rgba(203, 255, 51, 0.1), transparent 70%), var(--bg-soft);
-}
-.capsule-stage__video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .hero__stats {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -679,8 +690,16 @@ body.no-scroll { overflow: hidden; }
    Responsive: hero + broad grids
    ============================================================ */
 @media (max-width: 900px) {
-  .hero__inner { grid-template-columns: 1fr; }
   .compare { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+  .hero { min-height: clamp(560px, 82vh, 760px); }
+  .hero__bg-video { object-position: 74% 38%; }
+  .hero__scrim {
+    background:
+      linear-gradient(180deg, rgba(6, 6, 6, 0.82) 0%, rgba(6, 6, 6, 0.58) 42%, rgba(6, 6, 6, 0.78) 76%, var(--bg) 100%);
+  }
 }
 
 @media (max-width: 640px) {

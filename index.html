@@ -76,6 +76,18 @@
 
 <!-- ============ HERO ============ -->
 <section id="top" class="hero">
+  <video
+    class="hero__bg-video"
+    id="capsule-video"
+    poster="hero-poster.jpg"
+    autoplay muted loop playsinline
+    aria-hidden="true"
+  >
+    <source src="hero-video.webm" type="video/webm">
+    <source src="hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="hero__scrim" aria-hidden="true"></div>
+
   <div class="wrap hero__inner">
 
     <div class="hero__copy">
@@ -110,25 +122,6 @@
           БАД
         </span>
         <span class="tag-badge">18+</span>
-      </div>
-    </div>
-
-    <div class="hero__visual">
-      <div class="capsule-stage bracket-frame">
-        <div class="corner corner--tl" aria-hidden="true"></div>
-        <div class="corner corner--tr" aria-hidden="true"></div>
-        <div class="corner corner--bl" aria-hidden="true"></div>
-        <div class="corner corner--br" aria-hidden="true"></div>
-        <video
-          class="capsule-stage__video"
-          id="capsule-video"
-          poster="capsule-poster.jpg"
-          autoplay muted loop playsinline
-          aria-label="Капсула RIZE раскрывается, высвобождая отложенное действие кофеина"
-        >
-          <source src="capsule-loop.webm" type="video/webm">
-          <source src="capsule-loop.mp4" type="video/mp4">
-        </video>
       </div>
     </div>
   </div>
