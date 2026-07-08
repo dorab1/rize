@@ -260,14 +260,6 @@ body.no-scroll { overflow: hidden; }
    Hero
    ============================================================ */
 .hero { position: relative; overflow: hidden; padding-top: clamp(48px, 8vw, 84px); }
-.hero__grid {
-  position: absolute; inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px);
-  background-size: 30px 30px;
-  -webkit-mask-image: radial-gradient(circle at 50% 20%, black 0%, transparent 72%);
-  mask-image: radial-gradient(circle at 50% 20%, black 0%, transparent 72%);
-  pointer-events: none;
-}
 
 .hero__inner {
   position: relative;
@@ -305,23 +297,17 @@ body.no-scroll { overflow: hidden; }
 .capsule-stage {
   position: relative;
   width: 100%;
-  max-width: 440px;
-  aspect-ratio: 1 / 1;
+  max-width: 520px;
+  aspect-ratio: 16 / 9;
   margin-inline: auto;
   border-radius: 28px;
   overflow: hidden;
   background: radial-gradient(circle at 50% 42%, rgba(203, 255, 51, 0.1), transparent 70%), var(--bg-soft);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.capsule-stage__placeholder {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 4rem;
-  font-style: italic;
-  color: var(--lime);
-  opacity: 0.35;
+.capsule-stage__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero__stats {

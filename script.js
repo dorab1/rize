@@ -8,6 +8,13 @@
   // ============================================================
   const YANDEX_FORM_URL = "https://forms.yandex.ru/u/6a4d3f5649af4715d120b5d0?iframe=1";
 
+  // ---------------- Reduced motion ----------------
+  const capsuleVideo = document.getElementById("capsule-video");
+  if (capsuleVideo && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    capsuleVideo.removeAttribute("autoplay");
+    capsuleVideo.pause();
+  }
+
   // ---------------- Mobile nav ----------------
   const navToggle = document.querySelector(".nav-toggle");
   const mobileNav = document.getElementById("mobile-nav");

@@ -76,8 +76,6 @@
 
 <!-- ============ HERO ============ -->
 <section id="top" class="hero">
-  <div class="hero__grid" aria-hidden="true"></div>
-
   <div class="wrap hero__inner">
 
     <div class="hero__copy">
@@ -121,7 +119,16 @@
         <div class="corner corner--tr" aria-hidden="true"></div>
         <div class="corner corner--bl" aria-hidden="true"></div>
         <div class="corner corner--br" aria-hidden="true"></div>
-        <p class="capsule-stage__placeholder">RIZE</p>
+        <video
+          class="capsule-stage__video"
+          id="capsule-video"
+          poster="capsule-poster.jpg"
+          autoplay muted loop playsinline
+          aria-label="Капсула RIZE раскрывается, высвобождая отложенное действие кофеина"
+        >
+          <source src="capsule-loop.webm" type="video/webm">
+          <source src="capsule-loop.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
@@ -286,7 +293,7 @@
 <!-- ============ AUDIENCE ============ -->
 <section id="audience" class="audience section">
   <div class="wrap">
-    <h2 class="section__title">Создан для тех, у кого нет права проспать</h2>
+    <h2 class="section__title">Для тех, у кого нет права проспать</h2>
 
     <div class="audience__grid">
       <article class="audience-card">
@@ -294,7 +301,7 @@
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6.5 7v10M4 9v6M17.5 7v10M20 9v6M8.5 12h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
         <h3 class="audience-card__title">Ранний спорт и пробежки</h3>
-        <p class="audience-card__text">Утренняя тренировка: фокус и энергия готовы ещё до будильника, теперь тренировка в удовольствие и не требует усилий над собой.</p>
+        <p class="audience-card__text">Фокус и энергия готовы ещё до будильника, теперь тренировка в удовольствие и не требует усилий над собой.</p>
       </article>
 
       <article class="audience-card">
@@ -315,7 +322,7 @@
 <!-- ============ REVIEWS ============ -->
 <section id="reviews" class="reviews section">
   <div class="wrap">
-    <h2 class="section__title">Что говорят те, кто уже попробовал формулу</h2>
+    <h2 class="section__title">Они уже почувствовали разницу</h2>
 
     <div class="reviews__grid">
       <blockquote class="review-card">
@@ -358,9 +365,9 @@
     <div class="corner corner--br" aria-hidden="true"></div>
 
     <p class="eyebrow eyebrow--alone">Первая партия ограничена</p>
-    <h2 class="section__title section__title--center">Будь в числе первых</h2>
+    <h2 class="section__title section__title--center">Забери своё идеальное утро</h2>
     <p class="section__lede section__lede--center">
-      Мы тестируем спрос перед запуском производства. Оставь контакты — сообщим точную дату старта
+      Мы тестируем спрос перед запуском производства. Оставь контакты, и мы сообщим точную дату старта
       и дадим ранний доступ по специальной цене первым в списке.
     </p>
     <button class="btn btn--primary btn--lg js-open-modal" type="button">
@@ -381,7 +388,7 @@
       </details>
       <details class="faq-item">
         <summary>Есть ли побочные эффекты?</summary>
-        <p>Как и у любого продукта с кофеином, возможна индивидуальная чувствительность. Не рекомендуется при непереносимости кофеина, беременности, кормлении грудью и лицам младше 18 лет. Перед применением рекомендуется консультация со специалистом.</p>
+        <p>Как и у любого продукта с кофеином, возможна индивидуальная чувствительность. Не рекомендуется при непереносимости кофеина, беременности, кормлении грудью и лицам младше 18 лет.</p>
       </details>
       <details class="faq-item">
         <summary>Сколько капсул принимать?</summary>
