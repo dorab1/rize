@@ -8,8 +8,6 @@
   // ============================================================
   const YANDEX_FORM_URL = "";
 
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
   // ---------------- Mobile nav ----------------
   const navToggle = document.querySelector(".nav-toggle");
   const mobileNav = document.getElementById("mobile-nav");
@@ -89,45 +87,11 @@
     document.body.classList.remove("no-scroll");
     document.removeEventListener("keydown", onKeydown);
     if (lastFocused instanceof HTMLElement) lastFocused.focus();
-    window.setTimeout(() => {
-      if (modal.getAttribute("data-open") === "false" && frame) frame.src = "";
-    }, 300);
+    if (frame) frame.src = "";
   }
 
   openButtons.forEach((btn) => btn.addEventListener("click", openModal));
   modal?.querySelectorAll("[data-close]").forEach((el) => el.addEventListener("click", closeModal));
-
-  // ---------------- Scroll reveal (vanilla, no deps) ----------------
-  if (!reduceMotion && "IntersectionObserver" in window) {
-    const selectors = [
-      ".section__title", ".section__lede", ".compare__col",
-      ".timeline__step", ".audience-card", ".review-card",
-      ".faq-item", ".supplement-card", ".facts__copy",
-      ".waitlist__inner", ".cross-section",
-    ];
-    const targets = document.querySelectorAll(selectors.join(","));
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            io.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
-    );
-    const viewportH = window.innerHeight || document.documentElement.clientHeight;
-    targets.forEach((el, i) => {
-      // Elements already on screen at load (e.g. after scroll restoration)
-      // stay visible immediately instead of risking a flash of invisible content.
-      const alreadyInView = el.getBoundingClientRect().top < viewportH;
-      if (alreadyInView) return;
-      el.classList.add("reveal");
-      el.style.transitionDelay = `${Math.min(i % 4, 3) * 60}ms`;
-      io.observe(el);
-    });
-  }
 
   // ---------------- Footer year ----------------
   const yearEl = document.getElementById("year");
